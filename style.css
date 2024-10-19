@@ -1,0 +1,126 @@
+*{
+    margin:0;
+    padding:0;
+}
+.gauge-container {
+    margin: 3rem 2rem 0 2rem;
+    display: inline-block;
+    position: relative;
+    font-family: sans-serif;
+  }
+  
+  .gauge-container .label {
+    position: absolute;
+    font-weight: bold;
+    font-size: 14px;
+  }
+  
+  .gauge-container .label--under {
+    left: -60px;
+    bottom: 40px;
+  }
+  
+  .gauge-container .label--obese {
+    left: 220px;
+    bottom: 40px;
+  }
+  
+  .gauge-container .label--over {
+    left: 160px;
+    top: -25px;
+  }
+  
+  .gauge-container .label--healthy {
+    top: -25px;
+  }
+  
+  .results {
+    text-align: center;
+    font-weight: bold;
+    margin-top: -25px;
+    position: relative;
+    z-index: 5;
+  }
+  
+  .results #number {
+    height: 30px;
+    font-size: 30px;
+    line-height: 30px;
+    margin: 0;
+  }
+  
+  .results #result-type {
+    margin: 0;
+    height: 22px;
+    line-height: 30px;
+    color: #51b152;
+  }
+  
+  .gauge {
+    border-radius: 200px 200px 0 0;
+    z-index: 0;
+    height: 100px;
+    position: relative;
+    overflow: hidden;
+    width: 200px;
+    background-image: linear-gradient(to right, #418bb0, #51b152 10%, #fbe350, #eb5130);
+  }
+  
+  .gauge .background {
+    height: 80px;
+    width: 160px;
+    background-color: white;
+    position: absolute;
+    bottom: 0;
+    border-radius: 200px 200px 0 0;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+  }
+  
+  .gauge .background .line {
+    background-color: white;
+    position: absolute;
+    bottom: -2px;
+    left: 50%;
+    transform: translateX(-50%) rotate(45deg);
+    z-index: 1;
+    width: 300px;
+    height: 4px;
+  }
+  
+  .gauge .background .line--1 {
+    transform: translateX(-50%) rotate(90deg);
+  }
+  
+  .gauge .background .line--3 {
+    transform: translateX(-50%) rotate(135deg);
+  }
+  
+  .gauge .display {
+    height: 50px;
+    width: 100px;
+    background-color: white;
+    position: absolute;
+    bottom: 0;
+    border-radius: 200px 200px 0 0;
+    left: 50%;
+    transform: translateX(-50%);
+    box-shadow: 0px -3px 10px #ccc;
+    z-index: 3;
+    text-align: center;
+  }
+  
+  .needle {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%) rotate(90deg);
+    bottom: -5px;
+    background: black;
+    height: 10px;
+    width: 170px;
+    z-index: 2;
+    border-top-left-radius: 50%;
+    border-bottom-left-radius: 50%;
+    transition: transform 0.6s;
+  }
